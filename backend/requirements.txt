@@ -11,5 +11,8 @@ redis==5.2.0
 langchain==0.2.12
 langchain-openai==0.1.20
 openai==1.47.0
+# openai 1.47.0 still relies on the older httpx API; pin to <0.28 to avoid
+# passing unsupported proxy args into the http client.
+httpx<0.28
 python-multipart==0.0.9
 tenacity==8.5.0
